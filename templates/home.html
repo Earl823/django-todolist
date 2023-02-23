@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+  <form action="result/" method="POST" class="input-group mb-3">
+  {% csrf_token %}
+  <input type="text" name="todo" class="form-control" placeholder="Add..." aria-describedby="basic-addon2">
+  <div class="form-group-append">
+    <button class="btn btn-outline-secondary" type="submit">Add</button>
+  </div>
+</form>
+{% endblock %}
