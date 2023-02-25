@@ -1,10 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-  <form action="result/" method="POST" class="input-group mb-3">
-  {% csrf_token %}
-  <input type="text" name="todo" class="form-control" placeholder="Add..." aria-describedby="basic-addon2">
-  <div class="form-group-append">
-    <button class="btn btn-outline-secondary" type="submit">Add</button>
+<div class="card text-center">
+  <div class="card-header">
+    Todo List
   </div>
-</form>
+  <div class="card-body">
+    <form action="/" method="POST" class="input-group mb-3">
+      {% csrf_token %}
+      <input type="text" name="todo" placeholder="Add..." maxlength="30" required class="form-control">
+      <div class="form-group-append">
+        <button class="btn btn-outline-secondary" type="submit">add</button>
+      </div>
+    </form>
+    <div class="p-1 mb-2 bg-info text-white">
+      {{name}}
+      <button type="button" name="rm_td" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+  <div class="card-footer text-muted">
+    Earl823
+  </div>
+</div>
 {% endblock %}

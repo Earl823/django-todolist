@@ -2,11 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 
+# this ia the hompage function
 def index(request):
-    return render(request, 'home.html', {})
-
-def result(request):
     td = request.POST['todo']
-    return render(request, 'result.html', {'name': td})
+    return render(request, 'home.html', {'name': td})
+
 
 
