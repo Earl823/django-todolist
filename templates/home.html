@@ -12,12 +12,16 @@
         <button class="btn btn-outline-secondary" type="submit">add</button>
       </div>
     </form>
+    {% for x in name %}
+    
     <div class="p-1 mb-2 bg-info text-white">
-      {{name}}
-      <button type="button" name="rm_td" class="close" data-dismiss="modal" aria-label="Close">
+      {{x.text}} {{x.complete}} {{x.id}}
+      <button type="submit" name="remove" value="cliked" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>
+      </button> 
     </div>
+    {% endfor %}
+    
   <div class="card-footer text-muted">
     Earl823
   </div>
